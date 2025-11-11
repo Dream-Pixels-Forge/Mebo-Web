@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeBo - Meubles en Métal et Bois</title>
+    <meta http-equiv="refresh" content="0; url=public/index.html">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #2d3748;
+            color: #f7fafc;
+            margin: 0;
+        }
+        .redirect-message {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(74, 85, 104, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #cd853f;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 20px;
+        }
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(205, 133, 63, 0.3);
+            border-radius: 50%;
+            border-top-color: #cd853f;
+            animation: spin 1s ease-in-out infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="redirect-message">
+        <h1>MeBo - Artisanat d'Exception</h1>
+        <p>Redirection vers le site web...</p>
+        <div class="loading"></div>
+        <p><small>Si la redirection ne fonctionne pas, <a href="public/index.html" style="color: #cd853f;">cliquez ici</a>.</small></p>
+    </div>
+
+    <script>
+        // Fallback redirect in case meta refresh doesn't work
+        setTimeout(function() {
+            window.location.href = 'public/index.html';
+        }, 1000);
+    </script>
+</body>
+</html>

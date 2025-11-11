@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "name": "Table industrielle Métal & Chêne",
+        "description": "Table basse design avec structure métallique noire et plateau en chêne massif recyclé. Finition mate anti-traces, pieds ajustables.",
+        "category": "tables",
+        "materials": ["acier noir", "chêne massif"],
+        "price": 450,
+        "image": "./assets/images/products/table-industrielle-métal-et-chêne.jpg",
+        "dimensions": "120x60x45 cm",
+        "weight": "25 kg",
+        "warranty": "5 ans",
+        "inStock": true,
+        "gallery": [
+            "./assets/images/products/product-1.jpg",
+            "./assets/images/products/product-2.jpg",
+            "./assets/images/products/product-3.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Chaise Scandinave Métal & Hêtre",
+        "description": "Chaise élégante avec cadre en acier thermolaqué et assise en bois de hêtre européen. Design ergonomique pour un confort optimal.",
+        "category": "chaises",
+        "materials": ["acier thermolaqué", "hêtre européen"],
+        "price": 180,
+        "image": "./assets/images/products/chaise-scandinave-métal-et-hêtre.jpg",
+        "dimensions": "45x50x82 cm",
+        "weight": "6 kg",
+        "warranty": "3 ans",
+        "inStock": true,
+        "gallery": [
+            "./assets/images/products/product-4.jpg",
+            "./assets/images/products/product-5.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Étagère Murale Industrielle",
+        "description": "Étagère murale originale combinant tubes métalliques et étagères en bois de noyer. Parfaite pour optimiser l'espace avec style.",
+        "category": "rangements",
+        "materials": ["tubes acier", "noyer massif"],
+        "price": 220,
+        "image": "./assets/images/products/étagère-murale-industrielle.jpg",
+        "dimensions": "80x25x100 cm",
+        "weight": "12 kg",
+        "warranty": "5 ans",
+        "inStock": true,
+        "gallery": [
+            "./assets/images/products/product-6.jpg",
+            "./assets/images/products/product-7.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Bureau Direction Métal & Acacia",
+        "description": "Bureau moderne avec structure en acier laqué noir mat et plateau en bois d'acacia. Deux tiroirs intégrés et passe-câbles.",
+        "category": "bureaux",
+        "materials": ["acier laqué", "acacia massif"],
+        "price": 750,
+        "image": "./assets/images/products/bureau-direction-métal-et-acacia.jpg",
+        "dimensions": "140x70x75 cm",
+        "weight": "45 kg",
+        "warranty": "5 ans",
+        "inStock": false,
+        "estimatedDelivery": "4-6 semaines",
+        "gallery": [
+            "./assets/images/products/product-1.jpg",
+            "./assets/images/products/product-2.jpg",
+            "./assets/images/products/product-3.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Console d'Entrée Design",
+        "description": "Console élégante en métal doré et plateau en marbre blanc. Parfaite pour sublimer votre entrée avec raffinement.",
+        "category": "rangements",
+        "materials": ["acier doré", "marbre blanc"],
+        "price": 890,
+        "image": "./assets/images/products/console-d'entrée-design.jpg",
+        "dimensions": "120x35x80 cm",
+        "weight": "35 kg",
+        "warranty": "5 ans",
+        "inStock": true,
+        "featured": true,
+        "gallery": [
+            "./assets/images/products/product-4.jpg",
+            "./assets/images/products/product-5.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Table à Manger Extensible",
+        "description": "Table à manger extensible avec mécanisme en acier et plateau en chêne naturel. Peut accueillir de 6 à 10 personnes.",
+        "category": "tables",
+        "materials": ["mécanisme acier", "chêne naturel"],
+        "price": 1200,
+        "image": "./assets/images/products/table-à-manger-extensible.jpg",
+        "dimensions": "160-260x90x75 cm",
+        "weight": "65 kg",
+        "warranty": "10 ans",
+        "inStock": true,
+        "featured": true,
+        "gallery": [
+            "./assets/images/products/product-6.jpg",
+            "./assets/images/products/product-7.jpg",
+            "./assets/images/products/product-8.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Fauteuil de Bureau Ergonomique",
+        "description": "Fauteuil de bureau avec structure métallique et assise en cuir véritable. Réglages multiples pour un confort optimal.",
+        "category": "chaises",
+        "materials": ["acier chrome", "cuir véritable"],
+        "price": 650,
+        "image": "./assets/images/products/fauteuil-de-bureau-ergonomique.jpg",
+        "dimensions": "65x70x110-120 cm",
+        "weight": "18 kg",
+        "warranty": "5 ans",
+        "inStock": true,
+        "gallery": [
+            "./assets/images/products/product-1.jpg",
+            "./assets/images/products/product-2.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Bibliothèque Modulaire",
+        "description": "Système de bibliothèque modulaire avec structure en acier et étagères en frêne. Composable selon vos besoins.",
+        "category": "rangements",
+        "materials": ["acier noir", "frêne massif"],
+        "price": 580,
+        "image": "./assets/images/products/bibliothèque-modulaire.jpg",
+        "dimensions": "80x30x200 cm",
+        "weight": "40 kg",
+        "warranty": "5 ans",
+        "inStock": true,
+        "customizable": true,
+        "gallery": [
+            "./assets/images/products/product-3.jpg",
+            "./assets/images/products/product-4.jpg",
+            "./assets/images/products/product-5.jpg"
+        ]
+    }
+]

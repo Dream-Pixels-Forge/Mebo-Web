@@ -1,0 +1,25 @@
+{
+  "name": "mebo-website",
+  "version": "1.0.0",
+  "description": "Site web pour l'entreprise MeBo spécialisée dans la fabrication de meubles combinant métal et bois",
+  "main": "src/js/main.js",
+  "scripts": {
+    "start": "npx http-server public",
+    "dev": "npx live-server public --port=3000",
+    "build": "echo 'Build process for MeBo website'",
+    "test": "echo 'Run tests for MeBo website'"
+  },
+  "keywords": [
+    "meubles",
+    "métal",
+    "bois",
+    "design",
+    "intérieur"
+  ],
+  "author": "MeBo - Meubles en Métal et Bois",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "live-server": "^1.2.2"
+  }
+}

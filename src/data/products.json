@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Table industrielle en métal et bois",
+        "description": "Table basse avec structure métallique noire et plateau en bois massif recyclé.",
+        "category": "tables",
+        "materials": ["métal", "bois"],
+        "price": 450,
+        "image": "./assets/images/products/table-industrielle-métal-et-chêne.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Chaise design en métal et bois",
+        "description": "Chaise élégante avec cadre en acier et assise en bois précieux.",
+        "category": "chaises",
+        "materials": ["métal", "bois"],
+        "price": 180,
+        "image": "./assets/images/products/chaise-scandinave-métal-et-hêtre.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Étagère murale combinée",
+        "description": "Étagère murale originale combinant tubes métalliques et étagères en bois.",
+        "category": "rangements",
+        "materials": ["métal", "bois"],
+        "price": 220,
+        "image": "./assets/images/products/étagère-murale-industrielle.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Bureau en métal et bois",
+        "description": "Bureau moderne avec structure en acier laqué noir et plateau en bois d'acacia.",
+        "category": "bureaux",
+        "materials": ["métal", "bois"],
+        "price": 750,
+        "image": "./assets/images/products/bureau-direction-métal-et-acacia.jpg"
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "author": "Marie Dubois",
+        "content": "Leur table basse en métal et bois a complètement transformé notre salon. La qualité est exceptionnelle !",
+        "rating": 5,
+        "date": "2024-01-15",
+        "location": "Lyon"
+    },
+    {
+        "id": 2,
+        "author": "Thomas Martin",
+        "content": "J'ai fait fabriquer un bureau sur mesure pour mon espace de travail. Le résultat dépasse mes attentes.",
+        "rating": 5,
+        "date": "2024-02-20",
+        "location": "Paris"
+    },
+    {
+        "id": 3,
+        "author": "Sophie Laurent",
+        "content": "L'étagère murale combinée est non seulement fonctionnelle mais aussi un vrai élément de décoration dans notre boutique.",
+        "rating": 5,
+        "date": "2024-03-10",
+        "location": "Marseille"
+    },
+    {
+        "id": 4,
+        "author": "Jean-Pierre Moreau",
+        "content": "Depuis 20 ans dans l'architecture d'intérieur, je recommande MeBo pour leur savoir-faire unique.",
+        "rating": 5,
+        "date": "2024-04-05",
+        "location": "Architecte d'intérieur"
+    }
+]

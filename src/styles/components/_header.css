@@ -1,0 +1,147 @@
+/* Styles for the header component with new color palette */
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.logo h1 span {
+    color: #795238;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+.nav-menu li {
+    margin-left: 2rem;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.nav-menu a:after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #795238;
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #d2b48c; /* A lighter, more visible brown tone */
+}
+
+.nav-menu a:hover:after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    padding: 0.3rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-toggle:hover {
+    background-color: rgba(121, 82, 56, 0.3);
+}
+
+/* Indicator for active section */
+.nav-menu a.active {
+    color: #d2b48c; /* Lighter brown for active state */
+}
+
+.nav-menu a.active:after {
+    width: 100%;
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: rgba(36, 35, 35, 0.95);
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 2rem;
+        transition: left 0.4s ease;
+        backdrop-filter: blur(5px);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .logo h1 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Animation for mobile menu */
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 0;
+    }
+}
+
+.nav-menu.active {
+    animation: slideIn 0.4s ease forwards;
+}

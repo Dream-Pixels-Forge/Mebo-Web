@@ -1,0 +1,219 @@
+/* Styles for the contact component with new color palette */
+
+.contact-section {
+    padding: 5rem 0;
+    background: linear-gradient(to bottom, #ffffff 0%, #f9f8f6 100%);
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+    align-items: start;
+}
+
+.contact-info h2,
+.contact-form h2 {
+    color: #242323;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.contact-info h2:after,
+.contact-form h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: #795238;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.contact-icon {
+    font-size: 1.5rem;
+    color: #795238;
+    min-width: 24px;
+}
+
+.contact-text h3 {
+    color: #242323;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+.contact-text p,
+.contact-text a {
+    color: #525254;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.contact-text a:hover {
+    color: #795238;
+    text-decoration: none;
+}
+
+.business-hours {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #d9d9d9;
+}
+
+.business-hours h3 {
+    color: #242323;
+    margin-bottom: 0.8rem;
+}
+
+.hours-list {
+    list-style: none;
+}
+
+.hours-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem 0;
+    color: #525254;
+}
+
+.contact-form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #363636;
+    font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #fcfcfc;
+    color: #242323;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #795238;
+    box-shadow: 0 0 0 3px rgba(121, 82, 56, 0.2);
+}
+
+.contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.submit-btn {
+    background: linear-gradient(135deg, #795238 0%, #5d3f2a 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: auto;
+    box-shadow: 0 4px 6px rgba(121, 82, 56, 0.2);
+}
+
+.submit-btn:hover {
+    background: linear-gradient(135deg, #5d3f2a 0%, #795238 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(121, 82, 56, 0.3);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Map container */
+.map-container {
+    margin-top: 2rem;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(36, 35, 35, 0.1);
+    height: 300px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #757575;
+}
+
+/* Animation for elements */
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.contact-info {
+    animation: slideInFromLeft 0.8s ease;
+}
+
+.contact-form {
+    animation: slideInFromRight 0.8s ease;
+}
+
+/* Mobile screens */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-section {
+        padding: 3rem 0;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+}

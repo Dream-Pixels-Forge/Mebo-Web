@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Démonstration MeBo - Site Complet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .demo-container {
+            background: white;
+            max-width: 1000px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #3498db, #e74c3c, #f39c12, #27ae60);
+        }
+        
+        .demo-title {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .demo-subtitle {
+            font-size: 1.5rem;
+            color: #7f8c8d;
+            margin-bottom: 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-left: 4px solid #3498db;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-card:nth-child(2) { border-left-color: #e74c3c; }
+        .feature-card:nth-child(3) { border-left-color: #f39c12; }
+        .feature-card:nth-child(4) { border-left-color: #27ae60; }
+        .feature-card:nth-child(5) { border-left-color: #9b59b6; }
+        .feature-card:nth-child(6) { border-left-color: #e67e22; }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.8rem;
+        }
+        
+        .feature-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .main-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+            margin: 2rem 0;
+        }
+        
+        .main-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(52, 152, 219, 0.4);
+        }
+        
+        .tech-stack {
+            background: #2c3e50;
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-top: 3rem;
+        }
+        
+        .tech-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1rem;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #3498db;
+            display: block;
+        }
+        
+        .stat-label {
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .footer-note {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+            border-left: 4px solid #27ae60;
+        }
+        
+        @media (max-width: 768px) {
+            .demo-container {
+                padding: 2rem;
+            }
+            
+            .demo-title {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1 class="demo-title">🎯 Site MeBo Complet</h1>
+        <p class="demo-subtitle">Site web professionnel prêt pour présentation client</p>
+        
+        <div class="stats-container">
+            <div class="stat-item">
+                <span class="stat-number">8</span>
+                <span class="stat-label">Produits</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Images Galerie</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">15+</span>
+                <span class="stat-label">Fonctionnalités</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Responsive</span>
+            </div>
+        </div>
+        
+        <a href="public/index.html" class="main-button pulse">
+            🚀 Lancer la Démonstration
+        </a>
+        
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🛍️</div>
+                <div class="feature-title">Panier Intelligent</div>
+                <div class="feature-desc">Système de panier avec gestion des quantités, sauvegarde locale et génération automatique de devis.</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <div class="feature-title">Modal Produits</div>
+                <div class="feature-desc">Affichage détaillé des produits avec informations complètes, images HD et actions rapides.</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🖼️</div>
+                <div class="feature-title">Galerie Interactive</div>
+                <div class="feature-desc">Lightbox professionnelle avec navigation fluide pour présenter votre atelier et savoir-faire.</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📧</div>
+                <div class="feature-title">Newsletter Avancée</div>
+                <div class="feature-desc">Inscription avec préférences personnalisées, validation temps réel et animations de succès.</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">❤️</div>
+                <div class="feature-title">Système Favoris</div>
+                <div class="feature-desc">Sauvegarde des produits favoris avec synchronisation panier et interface intuitive.</div>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Design Responsive</div>
+                <div class="feature-desc">Interface optimisée pour tous les écrans avec animations fluides et performance optimale.</div>
+            </div>
+        </div>
+        
+        <div class="tech-stack">
+            <h3>🔧 Technologies Utilisées</h3>
+            <div class="tech-items">
+                <span class="tech-item">HTML5 Sémantique</span>
+                <span class="tech-item">CSS3 Avancé</span>
+                <span class="tech-item">JavaScript ES6+</span>
+                <span class="tech-item">Architecture Modulaire</span>
+                <span class="tech-item">Mobile-First</span>
+                <span class="tech-item">SEO Optimisé</span>
+                <span class="tech-item">Performance Web</span>
+                <span class="tech-item">Accessibilité</span>
+            </div>
+        </div>
+        
+        <div class="footer-note">
+            <strong>✨ Site Prêt pour Production</strong><br>
+            Toutes les fonctionnalités sont opérationnelles. Images créées automatiquement pour la démonstration. 
+            Remplacez simplement par vos vraies photos de produits pour mise en ligne.
+        </div>
+        
+        <p style="margin-top: 2rem; color: #7f8c8d; font-size: 0.9rem;">
+            📋 Consultez le <strong>GUIDE_PRESENTATION_CLIENT.md</strong> pour le script de démonstration complet
+        </p>
+    </div>
+    
+    <script>
+        // Ajouter de l'interactivité à la page de démo
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation des cartes au survol
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) rotateX(10deg)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) rotateX(0)';
+                });
+            });
+            
+            // Animation des statistiques
+            const stats = document.querySelectorAll('.stat-number');
+            stats.forEach(stat => {
+                const finalValue = stat.textContent;
+                stat.textContent = '0';
+                
+                const increment = () => {
+                    const current = parseInt(stat.textContent);
+                    const target = parseInt(finalValue);
+                    
+                    if (current < target) {
+                        stat.textContent = current + 1;
+                        setTimeout(increment, 50);
+                    } else {
+                        stat.textContent = finalValue;
+                    }
+                };
+                
+                setTimeout(() => increment(), 500);
+            });
+        });
+    </script>
+</body>
+</html>

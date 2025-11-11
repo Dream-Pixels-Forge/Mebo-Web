@@ -1,0 +1,229 @@
+/* Styles pour la page des produits de MeBo - Version premium */
+
+.products-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 3rem 0;
+    background: linear-gradient(to right, #f8f8f8, #ffffff, #f8f8f8);
+}
+
+.products-header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+.products-header h1:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #3498db;
+}
+
+.products-header p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+.products-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.1);
+}
+
+.product-info {
+    padding: 1.8rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+}
+
+.product-info p {
+    color: #666;
+    margin-bottom: 1.2rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.price {
+    font-weight: bold;
+    color: #3498db;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    display: block;
+    position: relative;
+}
+
+.price:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: #3498db;
+}
+
+.product-details {
+    align-self: flex-start;
+}
+
+/* Catégories */
+[data-category] {
+    transition: all 0.3s ease;
+}
+
+[data-category].hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Animations pour les produits */
+.product-card.animation-delay-1 {
+    animation-delay: 0.1s;
+}
+
+.product-card.animation-delay-2 {
+    animation-delay: 0.2s;
+}
+
+.product-card.animation-delay-3 {
+    animation-delay: 0.3s;
+}
+
+.product-card.animation-delay-4 {
+    animation-delay: 0.4s;
+}
+
+/* Variations de couleurs pour les catégories */
+.category-tables {
+    border-top: 4px solid #9b59b6;
+}
+
+.category-chaises {
+    border-top: 4px solid #e74c3c;
+}
+
+.category-rangements {
+    border-top: 4px solid #2ecc71;
+}
+
+.category-bureaux {
+    border-top: 4px solid #f39c12;
+}
+
+/* Section détails du produit */
+.product-detail-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-detail-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.product-detail-content {
+    background: white;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    padding: 2rem;
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #777;
+    background: none;
+    border: none;
+}
+
+/* Pour les écrans mobiles */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .products-header h1 {
+        font-size: 2rem;
+    }
+    
+    .product-info {
+        padding: 1.2rem;
+    }
+    
+    .product-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .price {
+        font-size: 1.2rem;
+    }
+}
