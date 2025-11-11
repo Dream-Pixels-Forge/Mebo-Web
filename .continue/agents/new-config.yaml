@@ -11,7 +11,7 @@ models:
   - name: my gpt-5
     provider: openai
     model: gpt-5
-    apiKey: AIzaSyAYOEQmMs5p7XZ1O7WK5x3M_9OrfTn6mDc
+    apiKey: ${{ secrets.GOOGLE_API_KEY }}
   - uses: ollama/qwen2.5-coder-7b
   - uses: anthropic/claude-4-sonnet
     with:
